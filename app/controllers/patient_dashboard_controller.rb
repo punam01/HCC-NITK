@@ -1,0 +1,2 @@
+class PatientDashboardController < ApplicationController
+end
