@@ -1,1 +1,80 @@
-Patient dashboard
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Patient Dashboard</title>
+  </head>
+  <body>
+    <div class="card rounded-0 border border-0 bg-dark text-white">
+      <ul class="list-group list-group-horizontal">
+        <button type="button" class="btn btn-dark p-2 fw-lighter" style="width: 200px;">NITK Surathkal</button>
+        <button type="button" class="btn btn-dark p-2 fw-lighter" style="width: 200px;">About IRIS</button>
+        <div style="width: 200px;"></div>
+        <div style="width: 200px;"></div>
+        <div style="width: 200px;"></div>
+        <div style="width: 200px;"></div>
+        <button type="button" class="btn btn-dark p-2 fw-lighter" style="width: 200px;">Terms of Services</button>
+      </ul>
+    </div>
+
+    <nav class="navbar navbar-expand-lg shadow p-2 mb-4">
+      <div class="container-fluid">
+        <div class="card">
+          <a href="#" class="btn btn-primary p-2 border-0">I R I S</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item dropdown p-1">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Insititute
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Academics</a></li>
+                <li><a class="dropdown-item" href="#">Campus</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown p-1">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Academics
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown p-1">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Campus
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item m-2">
+              <div class="rounded-circle">
+                <%= image_tag "nitk.jpg", height:"50px",width:"50px",class:"rounded-circle shadow" %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
