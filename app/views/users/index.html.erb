@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+  </head>
+  <body>
+    <div class="login shadow p-3 ">
+      <h1 class="text-center">Register</h1>
+        <form class="needs-validation" action="/users" method="post">
+          <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+          <div class="form-group was-validated">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" type="name" name="user[name]" id="email" required>
+
+          </div>
+          <div class="form-group was-validated">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="user[email]" required>
+
+          </div>
+          <div class="form-group was-validated">
+            <label class="form-label" for="roll_no">Roll No</label>
+            <input class="form-control" type="text" name="user[roll_no]" required>
+
+          </div>
+
+          <div class="form-group was-validated">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" name="user[password]" required>
+
+          </div>
+
+          <div class="form-group was-validated">
+            <label class="form-label" for="password">Confirm Password</label>
+            <input class="form-control" type="password" name="user[password_confirmation]" required>
+
+          </div>
+
+          <input type="submit" value="SIGN UP" name="submit" class="btn btn-success w-100 submit">
+        </form>
+        <span class="text-center">Already have an account?<a href="/users/login"
+          class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Login</a>
+        </span>
+
+
+    </div>
+  </body>
+</html>
