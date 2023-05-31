@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_06_151329) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_31_191905) do
+  create_table "doctors", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "specialization"
+    t.string "contact_number"
+    t.string "email"
+    t.string "address"
+    t.string "education"
+    t.integer "experience"
+    t.string "availability"
+    t.text "additional_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pharmacies", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "contact_number"
+    t.string "email"
+    t.string "working_hours"
+    t.text "additional_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "roll_no"
