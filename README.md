@@ -39,30 +39,79 @@ This README file provides an overview and instructions for the Health Care Cente
 8. Reporting and Analytics: Provides various reports and analytics related to patient statistics, appointments, and billing.
 
 ## Installation and Setup
-To set up the Health Care Center project locally, follow these steps:
+
+### Set up MySQL server
+
+1. Installing MySQL
+```
+$ sudo apt install mysql-server
+$ sudo systemctl start mysql.service
+```
+
+2. Configuring MySQL
+```
+$ sudo mysql
+$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+$ exit
+```
+
+3. Run Security Script
+```
+$ sudo mysql_secure_installation
+```
+
+4. Set up user
+```
+$ mysql -u root -p
+$ CREATE USER '<your_username>'@'localhost' IDENTIFIED BY '<password_of_the_user>';
+$ GRANT ALL PRIVILEGES ON * . * TO '<your_username>'@'localhost';
+$ ALTER USER '<your_username>'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password_of_the_user>';
+$ FLUSH PRIVILEGES;
+```
+
+### To set up the Health Care Center project locally, follow these steps:
 
 1. Clone the project repository from GitHub:
 ```bash
-git clone https://github.com/your-username/health-care-center.git
+$ git clone https://github.com/your-username/HCC-NITK.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd health-care-center
+$ cd HCC-NITK
 ```
-3. Install the required gems:
+3. Set to required Ruby version:
+- Check which ruby version you are currently on:
+    ```
+    $ ruby -v
+   
+    ```
+- In case, it is different from the version used in the project (check in Gemfile), you need to switch to correct version:
+    ```
+    $ asdf local ruby 3.1.3
+    ```
+4. Install the required gems:
 ```bash
-bundle install
+$ bundle install
 ```
-4. Set up the database by running the following commands:
+5. Set up config <br>
+Go to "./config/database.yml"
+Change Username and Password to your MySQL username and password:
+```
+username: <user_name>
+password: <password>
+```
+5. Set up the database by running the following commands:
 ```bash
-rails db:create
-rails db:migrate
+$ rails db:create
+$ rails db:migrate
 ```
-5. Start the Rails server:
+6. Start the Rails server:
 ```bash
-rails server
+$ rails server
+-- or --
+$ rails s
 ```
-6. Open your web browser and visit http://localhost:3000 to access the Health Care Center application.
+7. Open your web browser and visit http://localhost:3000 to access the Health Care Center application.
 
 ## Contributing
 
