@@ -4,10 +4,10 @@ one:
   name: MyString
   roll_no: MyString
   email: MyString
-  password_digest: <%= BCrypt::Password.create("secret") %>
+  password_digest: MyString
 
 two:
   name: MyString
   roll_no: MyString
   email: MyString
-  password_digest: <%= BCrypt::Password.create("secret") %>
+  password_digest: MyString

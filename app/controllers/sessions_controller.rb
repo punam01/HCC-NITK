@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id]=user.id
       redirect_to '/patient_dashboard/index'
     else
-      #flash[:login_errors]=user.errors.full_messages
+      flash[:login_errors]=user.errors.full_messages
       redirect_to '/users/index'
     end
   end
