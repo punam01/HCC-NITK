@@ -7,4 +7,15 @@ class AuthUser < ApplicationRecord
           :rememberable,
           :validatable,
           :trackable
+  enum roles: {
+            patient: 0,
+            doctor: 1,
+            admin: 2,
+            pharmacy: 3
+  }
+  after_initialize do
+    if self.new_record?
+      self.roles ||= :patient
+    end
+  end
 end

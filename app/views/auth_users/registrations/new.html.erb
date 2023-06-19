@@ -25,6 +25,11 @@
     placeholder:"Confirm Password" %>
   </div>
 
+  <div class="field"><br/>
+    <%= f.label :role %>
+    <%= f.select :roles, AuthUser.roles.keys.map { |role| [role.titleize, role] },class:"btn btn-primary"%>
+  </div>
+
   <div class="actions"><br/>
     <%= f.submit "Sign up",class:"btn btn-primary" %>
   </div><br/>
